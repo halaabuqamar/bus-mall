@@ -14,7 +14,7 @@ const imagesSection = document.getElementById('images-section');
 
 function product(name) {
     this.name = name;
-    this.path = `./img/${name}.jpg`;
+    this.path =['./img/'+bag+'.jpg','./img/'+banana+'.jpg','./img/'+bathroom+'.jpg','./img/'+boots+'.jpg','./img/'+breakfast+'.jpg', './img/'+bubblegum+'.jpg' , './img/'+chair+'.jpg','./img/'+cthulhu+'.jpg','./img/'+dog-duck+'.jpg', './img/'+dragon+'.jpg' , './img/'+pen+'.jpg','./img/'+pet-sweep+'.jpg','./img/'+scissors+'.jpg','./img/'+shark+'.jpg','./img/'+sweep+'.jpg','./img/'+tauntaun+'.jpg' ,'./img/'+unicorn+'.jpg','./img/'+usb+'.gif',,'./img/'+water-can'jpg','./img/'+wine-glass+'.jpg'];// this.path = `./assets/${name}.jpg`;
     this.Click = 0;
     this.view = 0;
    product.all.push(this);
