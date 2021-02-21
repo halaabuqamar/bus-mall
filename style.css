@@ -1,0 +1,38 @@
+
+h1{
+    float: right;
+    margin-right: 1130px;
+    color: rgb(131, 201, 115);
+  
+}
+
+
+#bus{
+    width: 80px;
+    height:80px;
+}
+
+#left-image{
+    float: right;
+    width:200px;
+    height: 200px;
+    
+    
+}
+#right-image{
+    float: right;
+    width: 200px;
+    height: 200px;
+}
+
+#mid-image{
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+body{
+    background-color: rgb(244, 255, 204);
+}
+header{
+    background-color: rgb(236, 240, 152);
+}
