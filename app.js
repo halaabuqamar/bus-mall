@@ -94,6 +94,9 @@ function vChart(){
            ,
            {
 
+//new obj for a second bar
+
+
             barPercentage:0.5,
               labe2: 'My Second dataset',
               backgroundColor: 'rgb(153, 255, 102)',
