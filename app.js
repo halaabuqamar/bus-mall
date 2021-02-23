@@ -3,6 +3,7 @@ const Pnames = ['bag.jpg','banana.jpg','bathroom.jpg','boots.jpg','breakfast.jpg
 
 
 
+const result = document.getElementById('result');
 
 
 
@@ -13,18 +14,39 @@ const imagesSection = document.getElementById('images-section');
 
 let remainingVotes = 25;
 
-function Product(name) {
+function Product(name,path,view,votes) {
     this.name = name;
     this.path = `./img/${name}`;
     this.view = 0;
     this.votes = 0;
    Product.all.push(this);
+   localStorage.setItem("info",JSON.stringify(Product.all));
 }
+
+Product.all = [];
+
+function retrieve()
+{
+  console.log(Product.all);
+  if(localStorage.length >0)
+  {
+    Product.all = JSON.parse(localStorage.getItem("orders"));
+    
+    render();
+  }
+  
+}
+
 
 Product.all = [];
 for (let i = 0; i < Pnames.length; i++) {
   new Product(Pnames[i]);
 }
+
+
+
+
+
 
 function render() {
   const leftIndex = randomNumber(0, Product.all.length - 1);
@@ -65,7 +87,6 @@ function clickHandler(event) {
 }
 render();
 
-
 function vChart(){
   const ctx = document.getElementById('myChart').getContext('2d');
  
@@ -87,7 +108,7 @@ function vChart(){
           labels: product,
           datasets: [{
               barPercentage:0.5,
-              label: 'My First dataset',
+              label: 'Votes',
               backgroundColor: 'rgb(220, 185, 206)',
               data: pvote,
           }
@@ -98,7 +119,7 @@ function vChart(){
 
 
             barPercentage:0.5,
-              labe2: 'My Second dataset',
+              labe2: 'Views',
               backgroundColor: 'rgb(153, 255, 102)',
               data: pview,
         
